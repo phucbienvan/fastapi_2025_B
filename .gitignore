@@ -2,3 +2,8 @@
 .env
 .DS_Store
 .cursor
+<<<<<<< HEAD
+=======
+*.pyc
+__pycache__
+>>>>>>> e6345e271988d41db266fe35c6a4de4ed9a3e48e
