@@ -1,6 +1,7 @@
 from app.models.base_model import BaseModel
 from sqlalchemy import Column, String, Float, DateTime, Integer
-import datetime
+from datetime import datetime
+
 
 class User(BaseModel):
     __tablename__ = "users"
@@ -8,5 +9,7 @@ class User(BaseModel):
     name: str = Column(String, index=True)
     email: str = Column(String, index=True)
     password: str = Column(String, index=True)
-    created_at: datetime.datetime = Column(DateTime, index=True)
-    updated_at: datetime.datetime = Column(DateTime, index=True)
+    status: int = Column(Integer, index=True, default=1)
+    created_at: datetime = Column(DateTime, index=True, default=datetime.now)
+    updated_at: datetime = Column(DateTime, index=True, default=datetime.now)
+
