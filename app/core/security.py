@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 from passlib.context import CryptContext
 from jose import jwt
 from datetime import datetime, timedelta
@@ -25,7 +25,7 @@ def verify_token(token: str) -> str | None:
         return email
     except:
         return None
-=======
+
 import bcrypt
 from passlib.context import CryptContext
 
@@ -33,4 +33,4 @@ password_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 def hash_password(password: str) -> str:
     return password_context.hash(password.encode('utf-8'))
->>>>>>> e6345e271988d41db266fe35c6a4de4ed9a3e48e
+
