@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, EmailStr
 from typing import Optional
 
 class UserSchema(BaseModel):
@@ -12,4 +12,8 @@ class UserSchema(BaseModel):
 class RegisterSchema(BaseModel):
     name: str
     email: str
+    password: str
+
+class LoginSchema(BaseModel):
+    email: EmailStr
     password: str

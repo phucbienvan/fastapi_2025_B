@@ -8,5 +8,6 @@ class User(BaseModel):
     name: str = Column(String, index=True)
     email: str = Column(String, index=True)
     password: str = Column(String, index=True)
+    remember_token = Column(String(255), nullable=True)
     created_at: datetime.datetime = Column(DateTime, index=True)
     updated_at: datetime.datetime = Column(DateTime, index=True)
