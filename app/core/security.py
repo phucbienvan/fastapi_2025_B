@@ -1,3 +1,4 @@
+
 from passlib.context import CryptContext
 from jose import jwt
 from datetime import datetime, timedelta
@@ -24,3 +25,5 @@ def verify_token(token: str) -> str | None:
         return email
     except:
         return None
+
+

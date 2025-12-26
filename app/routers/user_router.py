@@ -1,4 +1,5 @@
 from fastapi import APIRouter
+
 from app.schemas.user_schemas import RegisterUserSchema, UserSchema
 from app.models.user_model import User
 from app.db.base import get_db

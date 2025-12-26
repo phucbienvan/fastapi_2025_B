@@ -28,4 +28,4 @@ class DataResponse(ResponseSchemaBase, GenericModel, Generic[T]):
     
     @classmethod
     def success_response(cls, data: T):
-        return cls(code='000', message='thành công', data=data)
+

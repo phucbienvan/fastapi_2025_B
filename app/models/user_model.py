@@ -11,3 +11,5 @@ class User(BaseModel):
     status: int = Column(Integer, index=True, default=1)
     created_at: datetime = Column(DateTime, index=True, default=datetime.now)
     updated_at: datetime = Column(DateTime, index=True, default=datetime.now)
+    
+

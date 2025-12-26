@@ -8,12 +8,13 @@ from app.schemas.task_schemas import (
     UpdateTaskSchema
 )
 from typing import List
-
+from app.schemas.base_schema import DataResponse
+from app.schemas.task_schema import TaskSchema, TaskSchemaCreate, TaskSchemaUpdate
+from datetime import datetime
 router = APIRouter(
     prefix="/tasks",
     tags=["Tasks"]
 )
-
 @router.get("/", response_model=List[TaskSchema])
 async def get_tasks(
     skip: int = 0,
@@ -93,3 +94,8 @@ async def soft_delete_task(task_id: int, db: Session = Depends(get_db)):
         "message": "Task đã được xóa mềm thành công",
         "task_id": task_id
     }
+
+    return DataResponse.custom_response(data=task, code='200', message='update task success')
+    
+
+
