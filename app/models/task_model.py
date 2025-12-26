@@ -9,4 +9,3 @@ class Task(BaseModel):
     description: str = Column(String, index=True)
     status: float = Column(Integer, index=True)
     deleted_at: datetime.datetime = Column(DateTime, index=True)
-
